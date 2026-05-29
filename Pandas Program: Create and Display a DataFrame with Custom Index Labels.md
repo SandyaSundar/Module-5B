@@ -17,8 +17,25 @@ To create and display a **DataFrame** using the **Pandas** library in Python fro
 ---
 
 ## 💻 Program
-Add code here
+```
+import os
+os.environ["OPENBLAS_NUM_THREADS"]="1"
+import pandas as pd
+import numpy as np
+
+data = eval(input())
+
+df = pd.DataFrame(data)
+df.index = list("ABCDEFGHIJ")
+
+result = df[(df['perc'] >= 70) & (df['perc'] <= 90)]
+print("Number of student whoes percentage more than 70:")
+print(result)
+```
 
 ## Output
 
+<img width="1435" height="860" alt="image" src="https://github.com/user-attachments/assets/b569ea5e-4bb3-40a0-904b-c9898eb50757" />
+
 ## Result
+Thus the given python program has been executed successfully.
